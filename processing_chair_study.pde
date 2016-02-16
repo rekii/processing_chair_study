@@ -1,5 +1,6 @@
 import controlP5.*;
 
+final float X_HEIGHT = 150;
 float backgroundWhiteness = 0;
 
 int chair_num = 1;
@@ -10,26 +11,26 @@ boolean showCube = true;
 // ------ mouse interaction ------
 int offsetX = 0, offsetY = 0, clickX = 0, clickY = 0, zoom = -100;
 float rotationX = 0, rotationY = 0, targetRotationX = PI/12, targetRotationY = PI/6, clickRotationX, clickRotationY; 
-int spaceSizeX = 200, spaceSizeY = 200, spaceSizeZ = 200;
+float spaceSizeX = X_HEIGHT * 2, spaceSizeY = X_HEIGHT * 2, spaceSizeZ = X_HEIGHT * 2;
 
 void setup() {
   size (800, 800, P3D);
   
   for (int i = 0; i < chair_num; i++){
-     chairs[i] = new Chair (random(-spaceSizeX / 2, spaceSizeX / 2), 
-      random(-spaceSizeY / 2, spaceSizeY / 2),
-      random(-spaceSizeZ / 2, spaceSizeZ / 2));
-      chairs[i] = new Chair (0, 0, 0);
+     //chairs[i] = new Chair (random(-spaceSizeX / 2, spaceSizeX / 2), 
+     // random(-spaceSizeY / 2, spaceSizeY / 2),
+     // random(-spaceSizeZ / 2, spaceSizeZ / 2));
+     chairs[i] = new Chair (0, 0, 0);
   }
   
-  smooth();
+  smooth(8);
 }
 
 void draw() {
   ortho();
   background (255);
   
-  lights();
+  //lights();
   
   pushMatrix(); 
   // ------ set view ------
