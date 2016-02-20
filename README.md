@@ -2,4 +2,4 @@
 A (processing) chair study
 
 
-![alt tag](https://raw.githubusercontent.com/rekii/processing_chair_study/master/bin/data/chair.png)
+![alt tag](https://raw.githubusercontent.com/rekii/processing_chair_study/master/data/chair.png)
